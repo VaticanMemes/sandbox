@@ -63,7 +63,7 @@ function createHeader () {
     });
     node_9.appendChild(node_10);
     
-    var node_11 = document.createTextNode((new String("Create")));
+    var node_11 = document.createTextNode((new String("Home")));
     node_10.appendChild(node_11);
 
     var node_12 = document.createElement('LI');
@@ -80,7 +80,7 @@ function createHeader () {
     });
     node_12.appendChild(node_13);
     
-    var node_14 = document.createTextNode((new String("Home")));
+    var node_14 = document.createTextNode((new String("Create")));
     node_13.appendChild(node_14);
 
     return node_1;
