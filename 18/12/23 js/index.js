@@ -151,6 +151,10 @@ function createParagrah(text) {
     return paragraph;
 }
 
+function aCommitADayKeepsTheDoctorAway () {
+     // as par my rules I needed a commit today. This is just cheating isn't it?
+}
+
 /*
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
