@@ -119,7 +119,14 @@ function loadHome() {
 }
 
 function createHome() {
-    return createParagrah("Home");
+    var home = document.createElement("div");
+    var popUpButton = document.createElement("button");
+    popUpButton.innerText = "create a pop up";
+    popUpButton.addEventListener("click", (e) => {
+      document.getElementById("main").appendChild(createOverlay())
+    });
+    home.appendChild(popUpButton);
+    return home;
 }
 
 function loadCreate () {
@@ -151,8 +158,78 @@ function createParagrah(text) {
     return paragraph;
 }
 
-function aCommitADayKeepsTheDoctorAway () {
-     // as par my rules I needed a commit today. This is just cheating isn't it?
+function createOverlay () {
+    var node_1 = document.createElement('DIV');
+    node_1.setAttribute('class', 'card overlay text-center');
+    
+    var node_2 = document.createElement('DIV');
+    node_2.setAttribute('class', 'card-header');
+    node_1.appendChild(node_2);
+    
+    var node_3 = document.createElement('UL');
+    node_3.setAttribute('class', 'nav nav-tabs card-header-tabs');
+    node_2.appendChild(node_3);
+    
+    var node_4 = document.createElement('LI');
+    node_4.setAttribute('class', 'nav-item');
+    node_3.appendChild(node_4);
+    
+    var node_5 = document.createElement('A');
+    node_5.setAttribute('class', 'nav-link active');
+    node_5.setAttribute('href', '#');
+    node_4.appendChild(node_5);
+    
+    var node_6 = document.createTextNode((new String("Active")));
+    node_5.appendChild(node_6);
+    
+    var node_7 = document.createElement('LI');
+    node_7.setAttribute('class', 'nav-item');
+    node_3.appendChild(node_7);
+    
+    var node_8 = document.createElement('A');
+    node_8.setAttribute('class', 'nav-link');
+    node_8.setAttribute('href', '#');
+    node_7.appendChild(node_8);
+    
+    var node_9 = document.createTextNode((new String("Link")));
+    node_8.appendChild(node_9);
+    
+    var node_10 = document.createElement('LI');
+    node_10.setAttribute('class', 'nav-item');
+    node_3.appendChild(node_10);
+    
+    var node_11 = document.createElement('A');
+    node_11.setAttribute('class', 'nav-link disabled');
+    node_11.setAttribute('href', '#');
+    node_10.appendChild(node_11);
+    
+    var node_12 = document.createTextNode((new String("Disabled")));
+    node_11.appendChild(node_12);
+    
+    var node_13 = document.createElement('DIV');
+    node_13.setAttribute('class', 'card-body');
+    node_1.appendChild(node_13);
+    
+    var node_14 = document.createElement('H5');
+    node_14.setAttribute('class', 'card-title');
+    node_13.appendChild(node_14);
+    
+    var node_15 = document.createTextNode((new String("Special title treatment")));
+    node_14.appendChild(node_15);
+    
+    var node_16 = document.createElement('P');
+    node_16.setAttribute('class', 'card-text');
+    node_13.appendChild(node_16);
+    
+    var node_17 = document.createElement('A');
+    node_17.setAttribute('href', '#');
+    node_17.setAttribute('class', 'btn btn-primary');
+    node_13.appendChild(node_17);
+    
+    var node_18 = document.createTextNode((new String("Go somewhere")));
+    node_17.appendChild(node_18);
+    
+    return node_1;
 }
 
 /*
