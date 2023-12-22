@@ -90,6 +90,12 @@ function createBody() {
     var node_1 = document.createElement("main");
     node_1.classList.add("main");
     node_1.setAttribute("id", "main");
+    var node_2 = document.createElement("div");
+    node_2.setAttribute("class", "overlay");
+    node_2.setAttribute("id", "overlay");
+    node_1.appendChild(node_2);
+    console.log(node_1);
+    console.log(node_2);
 
     return node_1;
 }
@@ -123,7 +129,7 @@ function createHome() {
     var popUpButton = document.createElement("button");
     popUpButton.innerText = "create a pop up";
     popUpButton.addEventListener("click", (e) => {
-      document.getElementById("main").appendChild(createOverlay())
+      document.getElementById("main").appendChild(createPopUp())
     });
     home.appendChild(popUpButton);
     return home;
@@ -158,9 +164,9 @@ function createParagrah(text) {
     return paragraph;
 }
 
-function createOverlay () {
+function createPopUp () {
     var node_1 = document.createElement('DIV');
-    node_1.setAttribute('class', 'card overlay text-center');
+    node_1.setAttribute('class', 'card text-center');
     
     var node_2 = document.createElement('DIV');
     node_2.setAttribute('class', 'card-header');
